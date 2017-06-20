@@ -1,0 +1,814 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>AdminLTE 2 | User Profile</title>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/dist/css/AdminLTE.min.css}"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/dist/css/skins/_all-skins.min.css}"/>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">
+        
+        <div class="wrapper">
+
+            <header class="main-header">
+
+                <a href="#" class="logo">
+                    <span class="logo-mini"><b>AFE</b>-T</span>
+                    <span class="logo-lg text-red">
+                        <b>
+                            <div class="pull-center image">
+                                <div class="pull-left image"></div>
+                                <img th:src="@{/dist/img/Logo_afe.png}" src="../dist/img/Logo_afe.png" class="img-cube" alt="User Image"/> 
+                            </div>
+                        </b>
+                    </span>    
+                </a>
+
+            <nav class="navbar navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>      
+                </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown notifications-menu"></li>
+                            <li class="dropdown tasks-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bell-o"></i>
+                                    <span class="label label-danger">100</span>            
+                                </a>
+                            <ul class="dropdown-menu">
+                                    <li class="header">You have 7 tasks</li>
+                            <li>
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            <h3>Hold AFE <span class="label label-warning">30</span>	 </h3>
+                                        </a>                  
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <h3>Need AFE Review   <span class="label label-warning">30</span>	 </h3>
+                                        </a>                  
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <h3> Need AFE Approval   <span class="label label-warning">20</span>  </h3>
+                                        </a>                  
+                                    </li>
+				  <li>
+                                        <a href="#">
+                                            <h3>Pending AFE Lockdown Approval  <span class="label label-warning">10</span>  </h3>                      
+                                        </a>                  
+                                  </li>
+				  <li>
+                                        <a href="#">
+                                            <h3>Need AFE Rejection   <span class="label label-warning">5</span>  </h3>
+                                        </a>                  
+                                  </li>
+                                  <li>
+                                        <a href="#">
+                                            <h3>Need COR AFE Review   <span class="label label-warning">10</span>   </h3>
+                                        </a>                  
+                                  </li>
+                                  <li>
+                                        <a href="#">
+                                            <h3>Need COR AFE Approval   <span class="label label-warning">10</span>  </h3>
+                                        </a>                  
+                                  </li>
+				  <li>
+                                        <a href="#">
+                                            <h3>Need COR AFE Return   <span class="label label-warning">5</span>  </h3>
+                                        </a>                  
+                                  </li>
+                                </ul>
+                            </li>
+                            <li class="footer">
+                                    <a href="#">Refresh tasks</a>              
+                            </li>
+                            </ul>
+                            </li>
+                            
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img th:src="@{/dist/img/user2-160x160.jpg}" src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
+                                <span class="hidden-xs">
+                                    <b>Welcome, </b>Achmad Riad
+                                </span>            
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li class="user-header">
+                                        <img th:src="@{/dist/img/user2-160x160.jpg}" src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                                        <p>
+                                            Achmad Riad - Kepala Dinas<small>Divisi Pengendalian Biaya Operasi</small>
+                                            <small>Satuan Kerja Khusus Migas</small>                
+                                        </p>
+                                    </li>
+                                    <li class="user-body">
+                                        <div class="row"></div>
+                                    </li>
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>          
+                        </li>
+                        </ul>
+                    </div>
+            </nav>
+            </header>
+            
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <span class="logo-lg text-red"></span>
+                        <b>
+                            <div class="pull-left info"></div>
+                        </b>
+                    </div>
+                    
+                    <ul class="sidebar-menu">
+                        <li class="header">MENU UTAMA</li>
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-flag-o"></i>
+                                        <span>PROCESSED AFEs</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>
+                                        </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Done
+                                            <span class="pull-right-container">
+                                                <span class="label label-primary pull-right">1500</span>
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-circle-o text-green"></i> Hold AFEs
+                                                    <span class="pull-right-container">
+                                                        <span class="label label-primary pull-right">7</span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Need Review AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">1500</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Need Approval AFEs              
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+				        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-yellow"></i> Need Correction AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-red"></i> Pending Lockdown AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Approved AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-red"></i> Rejected AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+							
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Need Review COR AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">1500</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Need Approval COR AFEs              
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-green"></i> Approved COR AFEs   
+                                            <span class="pull-right-container">
+                                                <span class="label label-primary pull-right">6</span>
+                                            </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-yellow"></i> Need Correction COR AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="fa fa-circle-o text-red"></i> Returned COR AFEs
+                                                <span class="pull-right-container">
+                                                    <span class="label label-primary pull-right">6</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-pie-chart"></i>
+                                        <span>PPA REPORTS</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i> 
+                                            </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> # of AFEs vs. ...</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> AFE Approved vs. ...</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> AFE Estimate(Proposed) vs. ...</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Summary Approval Time</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> AFE Lists</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> New Report</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-pie-chart"></i>
+                                    <span>PBO REPORTS</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i>   
+                                        </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> # of Closed Out AFEs</a></li>
+                                    <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> # of Submitted AFEs for Close Out ... </a></li>
+                                    <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> COR AFE List</a></li>
+                                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Summary of Approval Time</a></li>
+                                    <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Summary of Approval COR Variance</a></li>
+                                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Summary of Approval COR AFEs Processed</a></li>		 
+                                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> US$ Realization of Proposed and Approved AFEs</a></li>
+                                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> AFE Status vs. ... </a></li>
+                                    <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Outstanding COR AFE by ... </a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="#"><i class="fa fa-files-o"></i> <span>ALL AFE List</span>
+                                    <span class="pull-right-container">
+                                        <small class="label pull-right bg-green"></small>            
+                                    </span>          
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#"><i class="fa fa-th"></i> <span>AFE Bundling Review List</span>
+                                    <span class="pull-right-container">
+                                        <small class="label pull-right bg-green"></small>            
+                                    </span>          
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#"><i class="fa fa-th"></i> <span>AFE Bundling Approval List</span>
+                                    <span class="pull-right-container">
+                                        <small class="label pull-right bg-green"></small>            
+                                    </span>          
+                                </a>
+                            </li>
+                            
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-wrench"></i> 
+                                    <span>SETUP</span> 
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-left pull-right"></i> 
+                                        </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a href="#"><i class="fa fa-circle-o"></i> AFE Setup				  
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i> 
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> AFE Number</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> AFE Priority</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> AFE Status</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Delete AFE</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Additional Information</a></li>			
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Required Document</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Approval Hierarchy</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Excel Import Setting</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Holiday</a></li>
+                                        </ul>
+                                    </li>				 
+                                    <li>   
+					<a href="#"><i class="fa fa-circle-o"></i> Operator and WK
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Area</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Holding Company(HC)</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Reference Data(OC)</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Operating Company(OC)</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Reference Data(WK)</a></li>			
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Wilayah Kerja(WK)</a></li>		
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-circle-o"></i> User Administration
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i> 
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> User Roles</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> User Setup(SkkMigas)</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> User Setup(KKKS)</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Delegate Setup</a></li>					
+					</ul>
+                                    </li>
+                                    <li>
+					<a href="#"><i class="fa fa-circle-o"></i> Notifications
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+					<ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> General</a></li>
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Custom</a></li>						
+				   	</ul>
+                                    </li>
+                                    <li>
+					<a href="#"><i class="fa fa-circle-o"></i> Chart of Account
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#"><i class="fa fa-circle-o"></i> Budget Schedule</a></li>							
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-user"></i>
+                                    <span>USER SETUP</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="pages/profile.html"><i class="fa fa-circle-o"></i> User Detail</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Delegate Setup</a></li>
+                                </ul>
+                            </li> 
+                            
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-pie-chart"></i>
+                                        <span>OPERATOR MENU</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Download Template</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> All AFE List</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> My AFE Templates</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> New AFE Bundling List</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> COR AFE Bundling List</a></li>
+                                    <li><a href="#"><i class="fa fa-circle-o"></i> Create a New AFE.</a></li>
+                                </ul>
+                            </li>
+                    </ul> 
+                </section>
+            </aside>
+
+  
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        User Profile
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="../index2.html"><i class="fa fa-dashboard"></i> Home</a></li>
+                            <li><a href="#"></a></li>
+                            <li class="active">User profile</li>
+                    </ol>
+                </section>
+
+    
+                <section class="content">
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="box box-primary">
+                            <div class="box-body box-profile">
+                                <img class="profile-user-img img-responsive img-circle" th:src="@{/dist/img/user4-128x128.jpg}" src="../dist/img/user4-128x128.jpg" alt="User profile picture"/>
+
+                                <h3 class="profile-username text-center">Nina Mcintire</h3>
+
+                                <p class="text-muted text-center">Software Engineer</p>
+
+                            <ul class="list-group list-group-unbordered">
+                                <li class="list-group-item">
+                                    <b>Followers</b> <a class="pull-right">1,322</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Following</b> <a class="pull-right">543</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Friends</b> <a class="pull-right">13,287</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-block"><b>Follow</b></a>
+                            </div>
+                        </div>
+
+                        <div class="box box-primary">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">About Me</h3>
+                            </div>
+                            <div class="box-body">
+                                <strong><i class="fa fa-book margin-r-5"></i> Education</strong>
+
+                                <p class="text-muted">
+                                    B.S. in Computer Science from the University of Tennessee at Knoxville
+                                </p>
+                                <hr/>
+                                <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
+                                <p class="text-muted">Malibu, California</p>
+                                <hr/>
+                                <strong><i class="fa fa-pencil margin-r-5"></i> Skills</strong>
+
+                                <p>
+                                    <span class="label label-danger">UI Design</span>
+                                    <span class="label label-success">Coding</span>
+                                    <span class="label label-info">Javascript</span>
+                                    <span class="label label-warning">PHP</span>
+                                    <span class="label label-primary">Node.js</span>
+                                </p>
+
+                                <hr/>
+
+                                <strong><i class="fa fa-file-text-o margin-r-5"></i> Notes</strong>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-9">
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
+                                <li><a href="#timeline" data-toggle="tab">Timeline</a></li>
+                                <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                            </ul>
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="activity">
+                
+                            <div class="post">
+                                <div class="user-block">
+                                    <img class="img-circle img-bordered-sm" th:src="@{/dist/img/user1-128x128.jpg}" src="../dist/img/user1-128x128.jpg" alt="user image"/>
+                                        <span class="username">
+                                            <a href="#">Jonathan Burke Jr.</a>
+                                            <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                                        </span>
+                                        <span class="description">Shared publicly - 7:30 PM today</span>
+                                </div>
+                                <p>
+                                    Lorem ipsum represents a long-held tradition for designers,
+                                    typographers and the like. Some people hate it and argue for
+                                    its demise, but others ignore the hate as they create awesome
+                                    tools to help create filler text for everyone from bacon lovers
+                                    to Charlie Sheen fans.
+                                </p>
+                                <ul class="list-inline">
+                                    <li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
+                                    <li><a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a></li>
+                                    <li class="pull-right">
+                                        <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
+                                    (5)</a></li>
+                                </ul>
+
+                                <input class="form-control input-sm" type="text" placeholder="Type a comment"/>
+                            </div>
+                <!-- /.post -->
+
+                <!-- Post -->
+                            <div class="post clearfix">
+                                <div class="user-block">
+                                    <img class="img-circle img-bordered-sm" th:src="@{/dist/img/user7-128x128.jpg}" src="../dist/img/user7-128x128.jpg" alt="User Image"/>
+                                        <span class="username">
+                                            <a href="#">Sarah Ross</a>
+                                            <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                                        </span>
+                                        <span class="description">Sent you a message - 3 days ago</span>
+                                </div>
+                  
+                                <p>
+                                    Lorem ipsum represents a long-held tradition for designers,
+                                    typographers and the like. Some people hate it and argue for
+                                    its demise, but others ignore the hate as they create awesome
+                                    tools to help create filler text for everyone from bacon lovers
+                                    to Charlie Sheen fans.
+                                </p>
+
+                                <form class="form-horizontal">
+                                    <div class="form-group margin-bottom-none">
+                                        <div class="col-sm-9">
+                                            <input class="form-control input-sm" placeholder="Response"/>
+                                        </div>
+                                    <div class="col-sm-3">
+                                        <button type="submit" class="btn btn-danger pull-right btn-block btn-sm">Send</button>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                <!-- /.post -->
+
+                <!-- Post -->
+                            <div class="post">
+                                <div class="user-block">
+                                    <img class="img-circle img-bordered-sm" th:src="@{/dist/img/user6-128x128.jpg}" src="../dist/img/user6-128x128.jpg" alt="User Image"/>
+                                    <span class="username">
+                                        <a href="#">Adam Jones</a>
+                                        <a href="#" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+                                    </span>
+                                    <span class="description">Posted 5 photos - 5 days ago</span>
+                                </div>
+                  <!-- /.user-block -->
+                                <div class="row margin-bottom">
+                                    <div class="col-sm-6">
+                                        <img class="img-responsive" th:src="@{/dist/img/photo1.png}" src="../dist/img/photo1.png" alt="Photo"/>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <img class="img-responsive" th:src="@{/dist/img/photo2.png}" src="../dist/img/photo2.png" alt="Photo"/>
+                                                <br/>
+                                                <img class="img-responsive" th:src="@{/dist/img/photo3.jpg}" src="../dist/img/photo3.jpg" alt="Photo"/>
+                                            </div>
+                                        <div class="col-sm-6">
+                                            <img class="img-responsive" th:src="@{/dist/img/photo4.jpg}" src="../dist/img/photo4.jpg" alt="Photo"/>
+                                            <br/>
+                                            <img class="img-responsive" th:src="@{/dist/img/photo1.png}" src="../dist/img/photo1.png" alt="Photo"/>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                  
+
+                                <ul class="list-inline">
+                                    <li><a href="#" class="link-black text-sm"><i class="fa fa-share margin-r-5"></i> Share</a></li>
+                                    <li>
+                                        <a href="#" class="link-black text-sm"><i class="fa fa-thumbs-o-up margin-r-5"></i> Like</a>
+                                    </li>
+                                    <li class="pull-right">
+                                        <a href="#" class="link-black text-sm"><i class="fa fa-comments-o margin-r-5"></i> Comments
+                                    (5)</a></li>
+                                </ul>
+
+                                <input class="form-control input-sm" type="text" placeholder="Type a comment"/>
+                            </div>
+                            </div>
+              
+                            <div class="tab-pane" id="timeline">
+                <!-- The timeline -->
+                            <ul class="timeline timeline-inverse">
+                  <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-red">
+                                    10 Feb. 2014
+                                </span>
+                            </li>
+                  <!-- /.timeline-label -->
+                  <!-- timeline item -->
+                            <li>
+                                <i class="fa fa-envelope bg-blue"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
+
+                                            <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+
+                                            <div class="timeline-body">
+                                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                                                weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                                                jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                                                quora plaxo ideeli hulu weebly balihoo...
+                                            </div>
+                                            <div class="timeline-footer">
+                                                <a class="btn btn-primary btn-xs">Read more</a>
+                                                <a class="btn btn-danger btn-xs">Delete</a>
+                                            </div>
+                                    </div>
+                            </li>
+                  <!-- END timeline item -->
+                  <!-- timeline item -->
+                            <li>
+                                <i class="fa fa-user bg-aqua"></i>
+
+                                    <div class="timeline-item">
+                                        <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span>
+
+                                    <h3 class="timeline-header no-border">
+                                        <a href="#">Sarah Young</a> accepted your friend request
+                                    </h3>
+                                    </div>
+                            </li>
+                  <!-- END timeline item -->
+                  <!-- timeline item -->
+                            <li>
+                                <i class="fa fa-comments bg-yellow"></i>
+
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+
+                                    <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+
+                                    <div class="timeline-body">
+                                        Take me to your leader!
+                                        Switzerland is small and neutral!
+                                        We are more like Germany, ambitious and misunderstood!
+                                    </div>
+                                    <div class="timeline-footer">
+                                        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+                                    </div>
+                                </div>
+                            </li>
+                  <!-- END timeline item -->
+                  <!-- timeline time label -->
+                            <li class="time-label">
+                                <span class="bg-green">
+                                    3 Jan. 2014
+                                </span>
+                            </li>
+                  <!-- /.timeline-label -->
+                  <!-- timeline item -->
+                            <li>
+                                <i class="fa fa-camera bg-purple"></i>
+
+                                <div class="timeline-item">
+                                    <span class="time"><i class="fa fa-clock-o"></i> 2 days ago</span>
+
+                                    <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+
+                                    <div class="timeline-body">
+                                        <img src="http://placehold.it/150x100" alt="..." class="margin"/>
+                                        <img src="http://placehold.it/150x100" alt="..." class="margin"/>
+                                        <img src="http://placehold.it/150x100" alt="..." class="margin"/>
+                                        <img src="http://placehold.it/150x100" alt="..." class="margin"/>
+                                    </div>
+                                </div>
+                            </li>
+                  <!-- END timeline item -->
+                            <li>
+                                <i class="fa fa-clock-o bg-gray"></i>
+                            </li>
+                            </ul>
+                        </div>
+              <!-- /.tab-pane -->
+
+                        <div class="tab-pane" id="settings">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputName" placeholder="Name"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="Email"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputName" class="col-sm-2 control-label">Name</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputName" placeholder="Name"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="inputSkills" placeholder="Skills"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"/> I agree to the <a href="#">terms and conditions</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-danger">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+              <!-- /.tab-pane -->
+                    </div>
+            <!-- /.tab-content -->
+                </div>
+          <!-- /.nav-tabs-custom -->
+            </div>
+        <!-- /.col -->
+        </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+    </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 3.0.0
+    </div>
+    <strong>Copyright &copy; 2017 <a href="http://almsaeedstudio.com">SkkMigas</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab"> </div>
+      
+      <!-- /.tab-pane -->
+    </div>
+    </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+ 
+</div>
+        
+        
+        <script th:src="@{/plugins/jQuery/jquery-2.2.3.min.js}"></script>
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/plugins/fastclick/fastclick.js}"></script>
+        <script th:src="@{/dist/js/app.min.js}"></script>
+        <script th:src="@{/dist/js/demo.js}"></script>
+    </body>
+</html>
